@@ -5,9 +5,7 @@
 
 package planeteH_2;
 
-import planeteH_2.ia.JoueurArtificiel;
-
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  *
@@ -96,11 +94,11 @@ public class FenetrePlaneteH_2 extends javax.swing.JFrame
     private void demarrerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_demarrerButtonActionPerformed
 
         //TODO remove below decomment below
-        Joueur[] joueurs = new Joueur[]{new JoueurArtificiel(),new JoueurArtificiel()};
+        /*Joueur[] joueurs = new Joueur[]{new JoueurArtificiel(),new JoueurArtificiel()};
         for(int i=0;i<joueurs.length;i++)
             if(joueurs[i]==null) joueurs[i] = joueurGUI;
 
-        gameplay.setJoueurs(joueurs);
+        gameplay.setJoueurs(joueurs);*/
         //TODO remove above
         messageTextArea.setText("");
         demarrerButton.setEnabled(false);
