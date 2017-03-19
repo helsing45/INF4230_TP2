@@ -35,6 +35,7 @@ public class JoueurArtificiel implements Joueur {
     @Override
     public Position getProchainCoup(Grille grille, int delais) {
         GrilleAnalytics analytics = new GrilleAnalytics(grille);
+
         ArrayList<Position> casesvides = getAllPossiblePosition(grille);
         int choix = random.nextInt(casesvides.size());
         /*Position lastPositionPLayed = MemoryUtils.getLastPositionPlayed();

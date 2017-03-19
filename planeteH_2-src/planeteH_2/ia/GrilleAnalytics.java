@@ -30,14 +30,25 @@ public class GrilleAnalytics {
                 player2PlayedPositions.add(position);
             }
         }
-        grouping(1);
+        getGrouping(1);
     }
 
-    private List<List<Position>> grouping(int player) {
+    public int evaluate(int player) {
+        List<List<Position>> grouping = getGrouping(player);
+        int evaluation = 0;
+        for (List<Position> positions : grouping) {
+            evaluation += Math.pow(10, positions.size() - 1);
+        }
+        return evaluation;
+    }
+
+    public List<List<Position>> getGrouping(int player) {
         List<List<Position>> group = new ArrayList<>();
-        group.addAll(singleGroup(player));
         group.addAll(horizontalGrouping(player));
         group.addAll(verticalGrouping(player));
+        group.addAll(diagonalBottomLeftToTopRightGrouping(player));
+        group.addAll(diagonalTopLeftToBottomRightGrouping(player));
+        group.addAll(singleGroup(player));
         return group;
     }
 
@@ -55,7 +66,7 @@ public class GrilleAnalytics {
                     }
                     group.clear();
                 }
-                if (GrilleUtils.getColumnCount(grille) -1 == column && !group.isEmpty()) {
+                if (GrilleUtils.getColumnCount(grille) - 1 == column && group.size() > 1) {
                     groups.add(group);
                 }
             }
@@ -78,10 +89,88 @@ public class GrilleAnalytics {
                     }
                     group.clear();
                 }
-                if (GrilleUtils.getLineCount(grille) - 1 == line && !group.isEmpty()) {
+                if (GrilleUtils.getLineCount(grille) - 1 == line && group.size() > 1) {
                     groups.add(group);
                 }
             }
+        }
+        return groups;
+    }
+
+    public List<List<Position>> diagonalTopLeftToBottomRightGrouping(int player) {
+        List<List<Position>> groups = new ArrayList<>();
+        List<Position> group = new ArrayList<>();
+        /*for (int i = 0; i < GrilleUtils.getLineCount(grille); i++) {
+            for (int j = 0; j < GrilleUtils.getColumnCount(grille); j++) {
+                System.out.print(grille.getData()[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("============");*/
+        for (int c = -grille.getData().length; c < grille.getData()[0].length; c++) {
+            int c2 = c;
+            int l = 0;
+            if (c2 < 0) {
+                l = -c2;
+                c2 = 0;
+            }
+            for (; c2 < grille.getData()[0].length && l < grille.getData().length; c2++, l++) {
+                if (grille.get(l, c2) == player) {
+                    group.add(new Position(l, c2));
+                } else {
+                    if (group.size() > 1) {
+                        groups.add(new ArrayList<>(group));
+                    }
+                    group.clear();
+                }
+                //System.out.print(grille.getData()[l][c2] + " ");
+            }
+            if (group.size() > 1) {
+                groups.add(new ArrayList<>(group));
+                group.clear();
+            }
+            //System.out.println();
+        }
+
+        return groups;
+    }
+
+    public List<List<Position>> diagonalBottomLeftToTopRightGrouping(int player) {
+        List<List<Position>> groups = new ArrayList<>();
+        List<Position> group = new ArrayList<>();
+
+        /*for (int i = 0; i < GrilleUtils.getLineCount(grille); i++) {
+            for (int j = 0; j < GrilleUtils.getColumnCount(grille); j++) {
+                System.out.print(grille.getData()[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("============");*/
+        for (int c = -grille.getData().length; c < grille.getData()[0].length; c++) {
+            int c2 = c;
+            int l = grille.getData().length - 1;
+            if (c2 < 0) {
+                l += c2;
+                c2 = 0;
+            }
+            for (; c2 < grille.getData()[0].length && l >= 0; c2++, l--) {
+                //System.out.print(grille.getData()[l][c2] + " ");
+                if (grille.get(l, c2) == player) {
+                    group.add(new Position(l, c2));
+                } else {
+                    if (group.size() > 1) {
+                        groups.add(new ArrayList<>(group));
+                    }
+                    group.clear();
+                }
+            }
+            if (group.size() > 1) {
+                groups.add(new ArrayList<>(group));
+                group.clear();
+            }
+            //System.out.println();
         }
         return groups;
     }
