@@ -47,7 +47,7 @@ public class JoueurArtificiel implements Joueur {
         MemoryUtils.setLastPositionPlayed(lastPositionPLayed);
         */
         //return casesvides.get(choix);
-        return getV(grille);
+        return minimax(grille,2,getMyId(grille)).getSecond();
     }
 
     public Position getV(Grille grille) {
@@ -75,44 +75,38 @@ public class JoueurArtificiel implements Joueur {
         return getMyId(grille) == 1 ? 2 : 1;
     }
 
-    /*private int[] minimax(Grille grille, int depth, int player) {
-        // Generate possible next moves in a List of int[2] of {row, col}.
-        List<Grille> nextMoves = GrilleUtils.getNextMoves(player, grille);
+    private Pair<Integer,Position> minimax(Grille grille, int depth, int player) {
+        int myId = getMyId(grille);
+        int oppId = getOppId(grille);
+        List<Position> nextMoves = GrilleUtils.getEmptyCell(grille);
 
-        // mySeed is maximizing; while oppSeed is minimizing
-        int bestScore = (player == getMyId(grille)) ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+        int bestScore = player == myId ? Integer.MIN_VALUE : Integer.MAX_VALUE;
         int currentScore;
-        int bestRow = -1;
-        int bestCol = -1;
+        Position bestPosition = null;
 
         if (nextMoves.isEmpty() || depth == 0) {
-            // Gameover or depth reached, evaluate score
-            bestScore = evaluate();
+            bestScore = GrilleAnalytics.getAnalytics(grille).evaluate(player);
         } else {
-            for (int[] move : nextMoves) {
-                // Try this move for the current "player"
-                cells[move[0]][move[1]].content = player;
-                if (player == getMyId(grille)) {  // mySeed (computer) is maximizing player
-                    currentScore = minimax(grille, depth - 1, getOppId(grille))[0];
+            for (Position nextMove : nextMoves) {
+                grille.set(nextMove,player);
+                if (player == myId) {
+                    currentScore = minimax(grille,depth - 1, oppId).getFirst();
                     if (currentScore > bestScore) {
                         bestScore = currentScore;
-                        bestRow = move[0];
-                        bestCol = move[1];
+                        bestPosition = nextMove;
                     }
-                } else {  // oppSeed is minimizing player
-                    currentScore = minimax(grille, depth - 1, getMyId(grille))[0];
+                } else {
+                    currentScore = minimax(grille,depth - 1, myId).getFirst();
                     if (currentScore < bestScore) {
                         bestScore = currentScore;
-                        bestRow = move[0];
-                        bestCol = move[1];
+                        bestPosition = nextMove;
                     }
                 }
-                // Undo move
-                cells[move[0]][move[1]].content = Seed.EMPTY;
+                grille.set(nextMove,0);
             }
         }
-        return new int[]{bestScore, bestRow, bestCol};
-    }*/
+        return new Pair<>(bestScore,bestPosition);
+    }
 
 
     public ArrayList<Position> getAllPossiblePosition(Grille grille) {

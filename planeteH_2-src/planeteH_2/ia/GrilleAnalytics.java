@@ -40,15 +40,6 @@ public class GrilleAnalytics {
         return player1Score + player2Score;
     }
 
-    private int[] getSeries(int player){
-        int[] series = new int[]{0,0,0,0,0};
-        List<List<Position>> grouping = getGrouping(player);
-        for (List<Position> positions : grouping) {
-            series[positions.size() - 1] ++;
-        }
-        return series;
-    }
-
     private int getScore(int player) {
         List<List<Position>> grouping = getGrouping(player);
         int evaluation = 0;
