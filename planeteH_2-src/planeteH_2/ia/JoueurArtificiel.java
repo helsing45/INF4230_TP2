@@ -5,8 +5,7 @@ package planeteH_2.ia;
  *
  * Vous pouvez ajouter d'autres classes sous le package planeteH_2.ia.
  *
- * Prénom Nom    (CODE00000001)
- * Prénom Nom    (CODE00000002)
+ * Décary Jean-Christophe    (DECJ20119200)
  */
 
 import planeteH_2.Grille;
@@ -35,19 +34,8 @@ public class JoueurArtificiel implements Joueur {
      */
     @Override
     public Position getProchainCoup(Grille grille, int delais) {
-        GrilleAnalytics analytics = new GrilleAnalytics(grille);
-        ArrayList<Position> casesvides = getAllPossiblePosition(grille);
-        int choix = random.nextInt(casesvides.size());
-        /*Position lastPositionPLayed = MemoryUtils.getLastPositionPlayed();
-        if(lastPositionPLayed == null){
-            lastPositionPLayed = new Position(0,0);
-        }else {
-           lastPositionPLayed = GrilleUtils.getEmptyNeighbour(grille, lastPositionPLayed).get(0);
-        }
-        MemoryUtils.setLastPositionPlayed(lastPositionPLayed);
-        */
-        //return casesvides.get(choix);
-        return minimax(grille,2,getMyId(grille)).getSecond();
+        return minimax(grille, 2, getMyId(grille),Integer.MIN_VALUE,Integer.MAX_VALUE).getSecond();
+        //return minimax(grille, 2, getMyId(grille)).getSecond();
     }
 
     public Position getV(Grille grille) {
@@ -75,7 +63,7 @@ public class JoueurArtificiel implements Joueur {
         return getMyId(grille) == 1 ? 2 : 1;
     }
 
-    private Pair<Integer,Position> minimax(Grille grille, int depth, int player) {
+    private Pair<Integer, Position> minimax(Grille grille, int depth, int player) {
         int myId = getMyId(grille);
         int oppId = getOppId(grille);
         List<Position> nextMoves = GrilleUtils.getEmptyCell(grille);
@@ -88,24 +76,64 @@ public class JoueurArtificiel implements Joueur {
             bestScore = GrilleAnalytics.getAnalytics(grille).evaluate(player);
         } else {
             for (Position nextMove : nextMoves) {
-                grille.set(nextMove,player);
+                grille.set(nextMove, player);
                 if (player == myId) {
-                    currentScore = minimax(grille,depth - 1, oppId).getFirst();
+                    currentScore = minimax(grille, depth - 1, oppId).getFirst();
                     if (currentScore > bestScore) {
                         bestScore = currentScore;
                         bestPosition = nextMove;
                     }
                 } else {
-                    currentScore = minimax(grille,depth - 1, myId).getFirst();
+                    currentScore = minimax(grille, depth - 1, myId).getFirst();
                     if (currentScore < bestScore) {
                         bestScore = currentScore;
                         bestPosition = nextMove;
                     }
                 }
-                grille.set(nextMove,0);
+                grille.set(nextMove, 0);
             }
         }
-        return new Pair<>(bestScore,bestPosition);
+        return new Pair<>(bestScore, bestPosition);
+    }
+
+    private Pair<Integer, Position> minimax(Grille grille, int depth, int player, int alpha, int beta) {
+        int myId = getMyId(grille);
+        int oppId = getOppId(grille);
+        // Generate possible next moves in a list of int[2] of {row, col}.
+
+        List<Position> nextMoves = GrilleUtils.getEmptyCell(grille);
+
+        // mySeed is maximizing; while oppSeed is minimizing
+        int score;
+        Position bestPosition = null;
+
+        if (nextMoves.isEmpty() || depth == 0) {
+            // Gameover or depth reached, evaluate score
+            score = GrilleAnalytics.getAnalytics(grille).evaluate(player);
+            return new Pair<>(score, bestPosition);
+        } else {
+            for (Position move : nextMoves) {
+                grille.set(move, player);
+                if (player == myId) {
+                    score = minimax(grille, depth - 1, oppId, alpha, beta).getFirst();
+                    if (score > alpha) {
+                        alpha = score;
+                        bestPosition = move;
+                    }
+                } else {  // oppSeed is minimizing player
+                    score = minimax(grille, depth - 1, myId, alpha, beta).getFirst();
+                    if (score < beta) {
+                        beta = score;
+                        bestPosition = move;
+                    }
+                }
+                // undo move
+                grille.set(move, 0);
+                // cut-off
+                if (alpha >= beta) break;
+            }
+            return new Pair<>((player == myId) ? alpha : beta,bestPosition);
+        }
     }
 
 
@@ -124,7 +152,7 @@ public class JoueurArtificiel implements Joueur {
 
     @Override
     public String getAuteurs() {
-        return "Prénom1 Nom1 (CODE00000001)  et  Prénom2 Nom2 (CODE00000002)";
+        return "Décary Jean-Christophe (DECJ20119200)";
     }
 
 

@@ -21,14 +21,14 @@
           <file leaf-file-name="JoueurArtificiel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="223">
-                  <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+                <state relative-caret-position="463">
+                  <caret line="154" column="39" lean-forward="false" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
                   <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#2490#2491#0" expanded="true" />
-                    <element signature="e#2570#2571#0" expanded="true" />
-                    <element signature="e#2612#2613#0" expanded="true" />
-                    <element signature="e#2663#2664#0" expanded="true" />
+                    <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
+                    <element signature="method#getV#0;class#JoueurArtificiel#0" expanded="false" />
+                    <element signature="method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+                    <element signature="method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
+                    <element signature="method#getAllPossiblePosition#0;class#JoueurArtificiel#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -211,8 +211,8 @@
         <option value="$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/AIPlayer.java" />
         <option value="$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/AIPlayerMinimax.java" />
         <option value="$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/Pair.java" />
-        <option value="$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java" />
         <option value="$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/GrilleAnalytics.java" />
+        <option value="$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java" />
       </list>
     </option>
   </component>
@@ -528,13 +528,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java</url>
-          <line>53</line>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java</url>
-          <line>80</line>
+          <line>68</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
@@ -561,11 +561,11 @@
         <state relative-caret-position="527">
           <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-            <element signature="e#2570#2571#0" expanded="true" />
-            <element signature="e#2612#2613#0" expanded="true" />
-            <element signature="e#2663#2664#0" expanded="true" />
+            <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#getV#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#getAllPossiblePosition#0;class#JoueurArtificiel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -680,11 +680,11 @@
         <state relative-caret-position="527">
           <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-            <element signature="e#2570#2571#0" expanded="true" />
-            <element signature="e#2612#2613#0" expanded="true" />
-            <element signature="e#2663#2664#0" expanded="true" />
+            <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#getV#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#getAllPossiblePosition#0;class#JoueurArtificiel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -969,20 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-            <element signature="e#2570#2571#0" expanded="true" />
-            <element signature="e#2612#2613#0" expanded="true" />
-            <element signature="e#2663#2664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/GrilleAnalytics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -996,6 +982,20 @@
             <element signature="method#verticalGrouping#0;class#GrilleAnalytics#0" expanded="false" />
             <element signature="method#diagonalTopLeftToBottomRightGrouping#0;class#GrilleAnalytics#0" expanded="false" />
             <element signature="method#singleGroup#0;class#GrilleAnalytics#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="154" column="39" lean-forward="false" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
+          <folding>
+            <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#getV#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#getAllPossiblePosition#0;class#JoueurArtificiel#0" expanded="false" />
           </folding>
         </state>
       </provider>
