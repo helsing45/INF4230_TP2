@@ -128,7 +128,6 @@ public class GrilleUtils {
         return true;
     }
 
-
     public static List<Position> getEmptyCell(Grille grille) {
         ArrayList<Position> casesvides = new ArrayList<>();
         int nbcol = grille.getData()[0].length;

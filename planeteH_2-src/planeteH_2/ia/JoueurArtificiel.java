@@ -14,6 +14,7 @@ import planeteH_2.Joueur;
 import planeteH_2.Position;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 
@@ -35,7 +36,6 @@ public class JoueurArtificiel implements Joueur {
     @Override
     public Position getProchainCoup(Grille grille, int delais) {
         GrilleAnalytics analytics = new GrilleAnalytics(grille);
-
         ArrayList<Position> casesvides = getAllPossiblePosition(grille);
         int choix = random.nextInt(casesvides.size());
         /*Position lastPositionPLayed = MemoryUtils.getLastPositionPlayed();
@@ -46,19 +46,41 @@ public class JoueurArtificiel implements Joueur {
         }
         MemoryUtils.setLastPositionPlayed(lastPositionPLayed);
         */
-        return casesvides.get(choix);
+        //return casesvides.get(choix);
+        return getV(grille);
     }
 
-    public int getMyId() {
-        return 1; //TODO change
+    public Position getV(Grille grille) {
+        Position bestChoice = null;
+        int bestEvaluation = Integer.MIN_VALUE;
+        List<Position> emptyCells = GrilleUtils.getEmptyCell(grille);
+        for (Position emptyCell : emptyCells) {
+            Grille nextGrille = grille.clone();
+            nextGrille.set(emptyCell, getMyId(grille));
+            int evaluationCurrent = GrilleAnalytics.getAnalytics(nextGrille).evaluate(getMyId(grille));
+            if (bestEvaluation < evaluationCurrent) {
+                bestEvaluation = evaluationCurrent;
+                bestChoice = emptyCell;
+            }
+        }
+        return bestChoice;
+
+    }
+
+    public int getMyId(Grille grille) {
+        return (GrilleUtils.getAllPlayedPosition(grille).size() % 2) + 1;
+    }
+
+    public int getOppId(Grille grille) {
+        return getMyId(grille) == 1 ? 2 : 1;
     }
 
     /*private int[] minimax(Grille grille, int depth, int player) {
         // Generate possible next moves in a List of int[2] of {row, col}.
-        List<Position> nextMoves = GrilleUtils.getEmptyCell(grille);
+        List<Grille> nextMoves = GrilleUtils.getNextMoves(player, grille);
 
         // mySeed is maximizing; while oppSeed is minimizing
-        int bestScore = (player == getMyId()) ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+        int bestScore = (player == getMyId(grille)) ? Integer.MIN_VALUE : Integer.MAX_VALUE;
         int currentScore;
         int bestRow = -1;
         int bestCol = -1;
@@ -70,15 +92,15 @@ public class JoueurArtificiel implements Joueur {
             for (int[] move : nextMoves) {
                 // Try this move for the current "player"
                 cells[move[0]][move[1]].content = player;
-                if (player == mySeed) {  // mySeed (computer) is maximizing player
-                    currentScore = minimax(depth - 1, oppSeed)[0];
+                if (player == getMyId(grille)) {  // mySeed (computer) is maximizing player
+                    currentScore = minimax(grille, depth - 1, getOppId(grille))[0];
                     if (currentScore > bestScore) {
                         bestScore = currentScore;
                         bestRow = move[0];
                         bestCol = move[1];
                     }
                 } else {  // oppSeed is minimizing player
-                    currentScore = minimax(depth - 1, mySeed)[0];
+                    currentScore = minimax(grille, depth - 1, getMyId(grille))[0];
                     if (currentScore < bestScore) {
                         bestScore = currentScore;
                         bestRow = move[0];
@@ -89,7 +111,7 @@ public class JoueurArtificiel implements Joueur {
                 cells[move[0]][move[1]].content = Seed.EMPTY;
             }
         }
-        return new int[] {bestScore, bestRow, bestCol};
+        return new int[]{bestScore, bestRow, bestCol};
     }*/
 
 

@@ -5,6 +5,8 @@
 
 package planeteH_2;
 
+import planeteH_2.ia.GrilleUtils;
+
 import java.util.LinkedList;
 
 /**
@@ -66,7 +68,7 @@ public class Grille {
 
     @Override
     public String toString() {
-        char[] table = {'0', 'N', 'B'};
+        /*char[] table = {'0', 'N', 'B'};
         String result = "" + data.length + " " + data[0].length + "\n";
         for (byte[] b : data) {
             char[] c = new char[b.length];
@@ -74,6 +76,14 @@ public class Grille {
                 c[i] = table[b[i]];
             result += new String(c);
             result += '\n';
+        }
+        return result;*/
+        String result = "";
+        for (int i = 0; i < GrilleUtils.getLineCount(this); i++) {
+            for (int j = 0; j < GrilleUtils.getColumnCount(this); j++) {
+                result += getData()[i][j] + " ";
+            }
+            result += "\n";
         }
         return result;
     }

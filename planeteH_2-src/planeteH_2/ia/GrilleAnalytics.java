@@ -4,7 +4,6 @@ import planeteH_2.Grille;
 import planeteH_2.Position;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -12,16 +11,16 @@ import java.util.List;
  */
 public class GrilleAnalytics {
     private List<Position> player1PlayedPositions, player2PlayedPositions;
-    private HashMap<Integer, List<List<Position>>> player1PositionGrouping, player2PositionGrouping;
-    private int lineCount, columnCount;
     private Grille grille;
+
+    public static GrilleAnalytics getAnalytics(Grille grille){
+        return new GrilleAnalytics(grille);
+    }
 
     public GrilleAnalytics(Grille grille) {
         this.grille = grille;
         player1PlayedPositions = new ArrayList<>();
         player2PlayedPositions = new ArrayList<>();
-        lineCount = GrilleUtils.getLineCount(grille);
-        columnCount = GrilleUtils.getColumnCount(grille);
 
         for (Position position : GrilleUtils.getAllPlayedPosition(grille)) {
             if (grille.get(position) == 1) {
@@ -33,7 +32,24 @@ public class GrilleAnalytics {
         getGrouping(1);
     }
 
-    public int evaluate(int player) {
+    public int evaluate(int player){
+        int player1Score = getScore(1);
+        int player2Score = getScore(2);
+        player1Score *= player == 1 ? 1 : -1;
+        player2Score *= player == 2 ? 1 : -1;
+        return player1Score + player2Score;
+    }
+
+    private int[] getSeries(int player){
+        int[] series = new int[]{0,0,0,0,0};
+        List<List<Position>> grouping = getGrouping(player);
+        for (List<Position> positions : grouping) {
+            series[positions.size() - 1] ++;
+        }
+        return series;
+    }
+
+    private int getScore(int player) {
         List<List<Position>> grouping = getGrouping(player);
         int evaluation = 0;
         for (List<Position> positions : grouping) {
