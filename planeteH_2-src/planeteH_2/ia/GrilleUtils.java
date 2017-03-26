@@ -34,11 +34,11 @@ public class GrilleUtils {
 
     public static List<Position> getNeighbour(Grille grille, Position position) {
         List<Position> neighbour = new ArrayList<>();
-        add(neighbour, getTopNeighbour(grille, position));
+        add(neighbour, getTopNeighbour(position));
         add(neighbour, getBottomNeighbour(grille, position));
-        add(neighbour, getLeftNeighbour(grille, position));
+        add(neighbour, getLeftNeighbour(position));
         add(neighbour, getRightNeighbour(grille, position));
-        add(neighbour, getLeftTopNeighbour(grille, position));
+        add(neighbour, getLeftTopNeighbour(position));
         add(neighbour, getLeftBottomNeighbour(grille, position));
         add(neighbour, getRightTopNeighbour(grille, position));
         add(neighbour, getRightBottomNeighbour(grille, position));
@@ -51,7 +51,7 @@ public class GrilleUtils {
         }
     }
 
-    public static Position getTopNeighbour(Grille grille, Position position) {
+    public static Position getTopNeighbour(Position position) {
         if (position.ligne > 0) {
             return new Position(position.ligne - 1, position.colonne);
         }
@@ -65,7 +65,7 @@ public class GrilleUtils {
         return null;
     }
 
-    public static Position getLeftNeighbour(Grille grille, Position position) {
+    public static Position getLeftNeighbour(Position position) {
         if (position.colonne > 0) {
             return new Position(position.ligne, position.colonne - 1);
         }
@@ -73,13 +73,13 @@ public class GrilleUtils {
     }
 
     public static Position getRightNeighbour(Grille grille, Position position) {
-        if (position.colonne < getColumnCount(grille) - 1) {
+        if (position.colonne < getColumnCount(grille)- 1) {
             return new Position(position.ligne, position.colonne + 1);
         }
         return null;
     }
 
-    public static Position getLeftTopNeighbour(Grille grille, Position position) {
+    public static Position getLeftTopNeighbour(Position position) {
         if (position.ligne > 0 && position.colonne > 0) {
             return new Position(position.ligne - 1, position.colonne - 1);
         }
