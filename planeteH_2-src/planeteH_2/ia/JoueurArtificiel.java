@@ -12,14 +12,15 @@ import planeteH_2.Grille;
 import planeteH_2.Joueur;
 import planeteH_2.Position;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 
 public class JoueurArtificiel implements Joueur {
+    private long timeTurnEnd;
 
-    private final Random random = new Random();
+    private Heuristic getHeuristic(Grille grille){
+        return new IntermediaryHeuristic(grille);
+    }
 
     /**
      * Voici la fonction à modifier.
@@ -34,26 +35,17 @@ public class JoueurArtificiel implements Joueur {
      */
     @Override
     public Position getProchainCoup(Grille grille, int delais) {
-        return minimax(grille, 2, getMyId(grille),Integer.MIN_VALUE,Integer.MAX_VALUE).getSecond();
-        //return minimax(grille, 2, getMyId(grille)).getSecond();
+        timeTurnEnd = System.currentTimeMillis() + delais;
+        // Je ne suis pas sur pourquoi mais si j'utilise le minmaxWithTime limit avec deux IA ils ne font qu'alterner les couleurs,
+        // Si je planifie 3 coup d'avance (depth 3) aussi, donc avec deux coup d'avances max, ainsi que la limite de temps il fait des movements qui font du sens.
+
+        return timedMinimax(grille, 2, getMyId(grille), Integer.MIN_VALUE, Integer.MAX_VALUE).getSecond();
     }
 
-    public Position getV(Grille grille) {
-        Position bestChoice = null;
-        int bestEvaluation = Integer.MIN_VALUE;
-        List<Position> emptyCells = GrilleUtils.getEmptyCell(grille);
-        for (Position emptyCell : emptyCells) {
-            Grille nextGrille = grille.clone();
-            nextGrille.set(emptyCell, getMyId(grille));
-            int evaluationCurrent = GrilleAnalytics.getAnalytics(nextGrille).evaluate(getMyId(grille));
-            if (bestEvaluation < evaluationCurrent) {
-                bestEvaluation = evaluationCurrent;
-                bestChoice = emptyCell;
-            }
-        }
-        return bestChoice;
-
+    private long timeLeft() {
+        return timeTurnEnd - System.currentTimeMillis();
     }
+
 
     public int getMyId(Grille grille) {
         return (GrilleUtils.getAllPlayedPosition(grille).size() % 2) + 1;
@@ -63,6 +55,13 @@ public class JoueurArtificiel implements Joueur {
         return getMyId(grille) == 1 ? 2 : 1;
     }
 
+    /**
+     * Min max avec un niveau limite
+     * @param grille  la grille.
+     * @param depth la profondeur limite.
+     * @param player le joueur qui joue
+     * @return le score et la position qui a menez à ce score.
+     */
     private Pair<Integer, Position> minimax(Grille grille, int depth, int player) {
         int myId = getMyId(grille);
         int oppId = getOppId(grille);
@@ -73,7 +72,7 @@ public class JoueurArtificiel implements Joueur {
         Position bestPosition = null;
 
         if (nextMoves.isEmpty() || depth == 0) {
-            bestScore = GrilleAnalytics.getAnalytics(grille).evaluate(player);
+            bestScore = getHeuristic(grille).evaluate(player);
         } else {
             for (Position nextMove : nextMoves) {
                 grille.set(nextMove, player);
@@ -96,6 +95,10 @@ public class JoueurArtificiel implements Joueur {
         return new Pair<>(bestScore, bestPosition);
     }
 
+    /**
+     * MinMax avec prunding
+     * @see #minimax(Grille, int, int, int, int)
+     */
     private Pair<Integer, Position> minimax(Grille grille, int depth, int player, int alpha, int beta) {
         int myId = getMyId(grille);
         int oppId = getOppId(grille);
@@ -107,9 +110,8 @@ public class JoueurArtificiel implements Joueur {
         int score;
         Position bestPosition = null;
 
-        if (nextMoves.isEmpty() || depth == 0) {
-            // Gameover or depth reached, evaluate score
-            score = GrilleAnalytics.getAnalytics(grille).evaluate(player);
+        if (nextMoves.isEmpty() || depth == 0 || timeLeft() <= 0) {
+            score = getHeuristic(grille).evaluate(player);
             return new Pair<>(score, bestPosition);
         } else {
             for (Position move : nextMoves) {
@@ -132,22 +134,47 @@ public class JoueurArtificiel implements Joueur {
                 // cut-off
                 if (alpha >= beta) break;
             }
-            return new Pair<>((player == myId) ? alpha : beta,bestPosition);
+            return new Pair<>((player == myId) ? alpha : beta, bestPosition);
         }
     }
 
+    private Pair<Integer, Position> timedMinimax(Grille grille, int depth, int player, int alpha, int beta) {
+        int myId = getMyId(grille);
+        int oppId = getOppId(grille);
 
-    public ArrayList<Position> getAllPossiblePosition(Grille grille) {
-        ArrayList<Position> casesvides = new ArrayList<>();
-        int nbcol = grille.getData()[0].length;
-        for (int l = 0; l < grille.getData().length; l++) {
-            for (int c = 0; c < nbcol; c++) {
-                if (grille.getData()[l][c] == 0) {
-                    casesvides.add(new Position(l, c));
+        List<Position> nextMoves = GrilleUtils.getEmptyCell(grille);
+
+        int score;
+        Position bestPosition = null;
+
+        if (nextMoves.isEmpty() || depth == 0) {
+            score = getHeuristic(grille).evaluate(player);
+            return new Pair<>(score, bestPosition);
+        } else {
+            for (Position move : nextMoves) {
+                if(timeLeft() <= 0) break;
+
+                grille.set(move, player);
+                if (player == myId) {
+                    score = timedMinimax(grille, depth - 1, oppId, alpha, beta).getFirst();
+                    if (score > alpha) {
+                        alpha = score;
+                        bestPosition = move;
+                    }
+                } else {  // oppSeed is minimizing player
+                    score = timedMinimax(grille, depth - 1, myId, alpha, beta).getFirst();
+                    if (score < beta) {
+                        beta = score;
+                        bestPosition = move;
+                    }
                 }
+                // undo move
+                grille.set(move, 0);
+                // cut-off
+                if (alpha >= beta) break;
             }
+            return new Pair<>((player == myId) ? alpha : beta, bestPosition);
         }
-        return casesvides;
     }
 
     @Override
