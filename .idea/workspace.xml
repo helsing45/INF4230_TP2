@@ -28,43 +28,18 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="JoueurArtificiel.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="JoueurArtificiel.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+                <state relative-caret-position="170">
+                  <caret line="152" column="16" lean-forward="false" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
                   <folding>
                     <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
-                    <element signature="method#timeLeft#0;class#JoueurArtificiel#0" expanded="false" />
+                    <element signature="e#1639#1640#0" expanded="true" />
+                    <element signature="e#1702#1703#0" expanded="true" />
                     <element signature="docComment;method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+                    <element signature="method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
                     <element signature="docComment;method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
-                    <element signature="method#minimaxWithTimeLimit#0;class#JoueurArtificiel#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IntermediaryHeuristic.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/IntermediaryHeuristic.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
-                  <folding>
-                    <element signature="class#255:634" expanded="false" />
-                    <element signature="method#getNextPositivePosition#0;class#255:634" expanded="false" />
-                    <element signature="method#getNextNegativePosition#0;class#255:634" expanded="false" />
-                    <element signature="class#695:1074" expanded="false" />
-                    <element signature="method#getNextPositivePosition#0;class#695:1074" expanded="false" />
-                    <element signature="method#getNextNegativePosition#0;class#695:1074" expanded="false" />
-                    <element signature="class#1151:1539" expanded="false" />
-                    <element signature="method#getNextPositivePosition#0;class#1151:1539" expanded="false" />
-                    <element signature="method#getNextNegativePosition#0;class#1151:1539" expanded="false" />
-                    <element signature="class#1616:2012" expanded="false" />
-                    <element signature="method#getNextPositivePosition#0;class#1616:2012" expanded="false" />
-                    <element signature="method#getNextNegativePosition#0;class#1616:2012" expanded="false" />
-                    <element signature="method#canBeComplete#0;class#IntermediaryHeuristic#0" expanded="false" />
-                    <element signature="method#getAvailableSpace#0;class#IntermediaryHeuristic#0" expanded="false" />
-                    <element signature="class#NextPositionHandler#0;class#IntermediaryHeuristic#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -73,10 +48,15 @@
           <file leaf-file-name="GrilleUtils.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/GrilleUtils.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+                <state relative-caret-position="272">
+                  <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
                   <folding>
+                    <element signature="imports" expanded="false" />
                     <element signature="docComment;class#GrilleUtils#0" expanded="false" />
+                    <element signature="e#251#252#0" expanded="false" />
+                    <element signature="e#297#298#0" expanded="false" />
+                    <element signature="e#352#353#0" expanded="false" />
+                    <element signature="e#401#402#0" expanded="false" />
                     <element signature="method#getAllPlayedPosition#0;class#GrilleUtils#0" expanded="false" />
                     <element signature="method#add#0;class#GrilleUtils#0" expanded="false" />
                     <element signature="method#getTopNeighbour#0;class#GrilleUtils#0" expanded="false" />
@@ -98,9 +78,10 @@
             <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/Position.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding>
-                    <element signature="e#0#382#0" expanded="true" />
+                    <element signature="e#303#304#0" expanded="false" />
+                    <element signature="e#347#348#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -109,8 +90,8 @@
           <file leaf-file-name="FenetrePlaneteH_2.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/FenetrePlaneteH_2.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="137">
-                  <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+                <state relative-caret-position="1003">
+                  <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -119,9 +100,23 @@
           <file leaf-file-name="Grille.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/Grille.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-561">
-                  <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-                  <folding />
+                <state relative-caret-position="153">
+                  <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#2659#0" expanded="false" />
+                    <element signature="imports" expanded="false" />
+                    <element signature="e#622#623#0" expanded="false" />
+                    <element signature="e#659#660#0" expanded="false" />
+                    <element signature="e#921#922#0" expanded="false" />
+                    <element signature="e#954#955#0" expanded="false" />
+                    <element signature="e#988#989#0" expanded="false" />
+                    <element signature="e#1035#1036#0" expanded="false" />
+                    <element signature="e#1422#1423#0" expanded="false" />
+                    <element signature="e#1473#1474#0" expanded="false" />
+                    <element signature="e#2222#2223#0" expanded="false" />
+                    <element signature="e#2249#2250#0" expanded="false" />
+                    <element signature="e#2642#2652#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -130,13 +125,26 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="SimpleHeuristic.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/SimpleHeuristic.java">
+          <file leaf-file-name="IntermediaryHeuristic.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/IntermediaryHeuristic.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+                <state relative-caret-position="131">
+                  <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="class#255:634" expanded="false" />
+                    <element signature="method#getNextPositivePosition#0;class#255:634" expanded="false" />
+                    <element signature="method#getNextNegativePosition#0;class#255:634" expanded="false" />
+                    <element signature="class#695:1074" expanded="false" />
+                    <element signature="method#getNextPositivePosition#0;class#695:1074" expanded="false" />
+                    <element signature="method#getNextNegativePosition#0;class#695:1074" expanded="false" />
+                    <element signature="class#1151:1539" expanded="false" />
+                    <element signature="method#getNextPositivePosition#0;class#1151:1539" expanded="false" />
+                    <element signature="method#getNextNegativePosition#0;class#1151:1539" expanded="false" />
+                    <element signature="class#1616:2012" expanded="false" />
+                    <element signature="method#getNextPositivePosition#0;class#1616:2012" expanded="false" />
+                    <element signature="method#getNextNegativePosition#0;class#1616:2012" expanded="false" />
+                    <element signature="method#getAvailableSpace#0;class#IntermediaryHeuristic#0" expanded="false" />
+                    <element signature="class#NextPositionHandler#0;class#IntermediaryHeuristic#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -145,15 +153,13 @@
           <file leaf-file-name="Heuristic.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/Heuristic.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+                <state relative-caret-position="153">
+                  <caret line="34" column="43" lean-forward="false" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
                   <folding>
                     <element signature="docComment;class#Heuristic#0" expanded="false" />
                     <element signature="method#Heuristic#0;class#Heuristic#0" expanded="false" />
                     <element signature="method#horizontalGrouping#0;class#Heuristic#0" expanded="false" />
                     <element signature="method#verticalGrouping#0;class#Heuristic#0" expanded="false" />
-                    <element signature="method#diagonalTopLeftToBottomRightGrouping#0;class#Heuristic#0" expanded="false" />
-                    <element signature="method#diagonalBottomLeftToTopRightGrouping#0;class#Heuristic#0" expanded="false" />
                     <element signature="method#singleGroup#0;class#Heuristic#0" expanded="false" />
                   </folding>
                 </state>
@@ -170,6 +176,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>0 1</find>
+      <find>TIME LEFT</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -194,21 +206,11 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1612" />
-    <option name="height" value="886" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -221,71 +223,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INF4230_TP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INF4230_TP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INF4230_TP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INF4230_TP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INF4230_TP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planeteH_2-src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planeteH_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INF4230_TP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="INF4230_TP2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planeteH_2-src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planeteH_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="RunManager" selected="Application.FenetrePlaneteH_2">
     <configuration default="false" name="FenetrePlaneteH_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -312,53 +250,7 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
+      <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -412,27 +304,6 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -524,34 +395,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.FenetrePlaneteH_2" />
     </list>
@@ -575,34 +418,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1612" height="886" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957393" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3989704" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39847162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957393" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -647,24 +490,31 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java</url>
-          <line>159</line>
+          <url>file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/IntermediaryHeuristic.java</url>
+          <line>66</line>
           <properties />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java</url>
-          <line>162</line>
+          <url>file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/IntermediaryHeuristic.java</url>
+          <line>85</line>
           <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/Heuristic.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="grille" language="JAVA" />
         <watch expression="getAvailableSpace(group, handler)" language="JAVA" />
+        <watch expression="canBeComplete(group, handler)" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -673,24 +523,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/MemoryUtils.java">
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="221">
+          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding>
+            <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1702#1703#0" expanded="true" />
+            <element signature="docComment;method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="docComment;method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/IntermediaryHeuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="84" column="16" lean-forward="false" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+          <folding>
+            <element signature="class#255:634" expanded="false" />
+            <element signature="method#getNextPositivePosition#0;class#255:634" expanded="false" />
+            <element signature="method#getNextNegativePosition#0;class#255:634" expanded="false" />
+            <element signature="class#695:1074" expanded="false" />
+            <element signature="method#getNextPositivePosition#0;class#695:1074" expanded="false" />
+            <element signature="method#getNextNegativePosition#0;class#695:1074" expanded="false" />
+            <element signature="class#1151:1539" expanded="false" />
+            <element signature="method#getNextPositivePosition#0;class#1151:1539" expanded="false" />
+            <element signature="method#getNextNegativePosition#0;class#1151:1539" expanded="false" />
+            <element signature="class#1616:2012" expanded="false" />
+            <element signature="method#getNextPositivePosition#0;class#1616:2012" expanded="false" />
+            <element signature="method#getNextNegativePosition#0;class#1616:2012" expanded="false" />
+            <element signature="method#getAvailableSpace#0;class#IntermediaryHeuristic#0" expanded="false" />
+            <element signature="class#NextPositionHandler#0;class#IntermediaryHeuristic#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/GrilleUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#GrilleUtils#0" expanded="false" />
+            <element signature="e#251#252#0" expanded="false" />
+            <element signature="e#297#298#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+            <element signature="e#401#402#0" expanded="false" />
+            <element signature="method#getAllPlayedPosition#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#add#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getTopNeighbour#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getLeftNeighbour#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getRightNeighbour#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getLeftTopNeighbour#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getLeftBottomNeighbour#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getRightTopNeighbour#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getRightBottomNeighbour#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getEmptyNeighbour#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#isAlone#0;class#GrilleUtils#0" expanded="false" />
+            <element signature="method#getEmptyCell#0;class#GrilleUtils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/FenetrePlaneteH_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/Grille.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+        <state relative-caret-position="153">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
-            <element signature="method#timeLeft#0;class#JoueurArtificiel#0" expanded="false" />
-            <element signature="docComment;method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
-            <element signature="docComment;method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
-            <element signature="method#minimaxWithTimeLimit#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="e#0#2659#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#659#660#0" expanded="false" />
+            <element signature="e#921#922#0" expanded="false" />
+            <element signature="e#954#955#0" expanded="false" />
+            <element signature="e#988#989#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
+            <element signature="e#1422#1423#0" expanded="false" />
+            <element signature="e#1473#1474#0" expanded="false" />
+            <element signature="e#2222#2223#0" expanded="false" />
+            <element signature="e#2249#2250#0" expanded="false" />
+            <element signature="e#2642#2652#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/SimpleHeuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding>
+            <element signature="e#223#224#0" expanded="false" />
+            <element signature="e#252#253#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -698,14 +643,42 @@
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/Heuristic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Heuristic#0" expanded="false" />
             <element signature="method#Heuristic#0;class#Heuristic#0" expanded="false" />
             <element signature="method#horizontalGrouping#0;class#Heuristic#0" expanded="false" />
             <element signature="method#verticalGrouping#0;class#Heuristic#0" expanded="false" />
-            <element signature="method#diagonalTopLeftToBottomRightGrouping#0;class#Heuristic#0" expanded="false" />
-            <element signature="method#diagonalBottomLeftToTopRightGrouping#0;class#Heuristic#0" expanded="false" />
+            <element signature="method#singleGroup#0;class#Heuristic#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/MemoryUtils.java" />
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="57" lean-forward="false" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+          <folding>
+            <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1702#1703#0" expanded="true" />
+            <element signature="docComment;method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="docComment;method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/Heuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Heuristic#0" expanded="false" />
+            <element signature="method#Heuristic#0;class#Heuristic#0" expanded="false" />
+            <element signature="method#horizontalGrouping#0;class#Heuristic#0" expanded="false" />
+            <element signature="method#verticalGrouping#0;class#Heuristic#0" expanded="false" />
             <element signature="method#singleGroup#0;class#Heuristic#0" expanded="false" />
           </folding>
         </state>
@@ -714,9 +687,14 @@
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/GrilleUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;class#GrilleUtils#0" expanded="false" />
+            <element signature="e#251#252#0" expanded="false" />
+            <element signature="e#297#298#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+            <element signature="e#401#402#0" expanded="false" />
             <element signature="method#getAllPlayedPosition#0;class#GrilleUtils#0" expanded="false" />
             <element signature="method#add#0;class#GrilleUtils#0" expanded="false" />
             <element signature="method#getTopNeighbour#0;class#GrilleUtils#0" expanded="false" />
@@ -736,7 +714,7 @@
     <entry file="file://$PROJECT_DIR$/bin/planeteH_2/ia/GrilleUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#4926#0" expanded="true" />
           </folding>
@@ -745,24 +723,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/Grille.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#2659#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#659#660#0" expanded="false" />
+            <element signature="e#921#922#0" expanded="false" />
+            <element signature="e#954#955#0" expanded="false" />
+            <element signature="e#988#989#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
+            <element signature="e#1422#1423#0" expanded="false" />
+            <element signature="e#1473#1474#0" expanded="false" />
+            <element signature="e#2222#2223#0" expanded="false" />
+            <element signature="e#2249#2250#0" expanded="false" />
+            <element signature="e#2642#2652#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/JeuPlaneteH_2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/FenetrePlaneteH_2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="1003">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -770,27 +762,26 @@
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#382#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/MemoryUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/MemoryUtils.java" />
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/GrilleUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        <state relative-caret-position="272">
+          <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;class#GrilleUtils#0" expanded="false" />
+            <element signature="e#251#252#0" expanded="false" />
+            <element signature="e#297#298#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+            <element signature="e#401#402#0" expanded="false" />
             <element signature="method#getAllPlayedPosition#0;class#GrilleUtils#0" expanded="false" />
             <element signature="method#add#0;class#GrilleUtils#0" expanded="false" />
             <element signature="method#getTopNeighbour#0;class#GrilleUtils#0" expanded="false" />
@@ -809,48 +800,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/SimpleHeuristic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state relative-caret-position="272">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/Heuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="docComment;class#Heuristic#0" expanded="false" />
-            <element signature="method#Heuristic#0;class#Heuristic#0" expanded="false" />
-            <element signature="method#horizontalGrouping#0;class#Heuristic#0" expanded="false" />
-            <element signature="method#verticalGrouping#0;class#Heuristic#0" expanded="false" />
-            <element signature="method#diagonalTopLeftToBottomRightGrouping#0;class#Heuristic#0" expanded="false" />
-            <element signature="method#diagonalBottomLeftToTopRightGrouping#0;class#Heuristic#0" expanded="false" />
-            <element signature="method#singleGroup#0;class#Heuristic#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding>
-            <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
-            <element signature="method#timeLeft#0;class#JoueurArtificiel#0" expanded="false" />
-            <element signature="docComment;method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
-            <element signature="docComment;method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
-            <element signature="method#minimaxWithTimeLimit#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="e#223#224#0" expanded="false" />
+            <element signature="e#252#253#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/IntermediaryHeuristic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+        <state relative-caret-position="131">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="class#255:634" expanded="false" />
             <element signature="method#getNextPositivePosition#0;class#255:634" expanded="false" />
@@ -864,9 +826,37 @@
             <element signature="class#1616:2012" expanded="false" />
             <element signature="method#getNextPositivePosition#0;class#1616:2012" expanded="false" />
             <element signature="method#getNextNegativePosition#0;class#1616:2012" expanded="false" />
-            <element signature="method#canBeComplete#0;class#IntermediaryHeuristic#0" expanded="false" />
             <element signature="method#getAvailableSpace#0;class#IntermediaryHeuristic#0" expanded="false" />
             <element signature="class#NextPositionHandler#0;class#IntermediaryHeuristic#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/Heuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="34" column="43" lean-forward="false" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding>
+            <element signature="docComment;class#Heuristic#0" expanded="false" />
+            <element signature="method#Heuristic#0;class#Heuristic#0" expanded="false" />
+            <element signature="method#horizontalGrouping#0;class#Heuristic#0" expanded="false" />
+            <element signature="method#verticalGrouping#0;class#Heuristic#0" expanded="false" />
+            <element signature="method#singleGroup#0;class#Heuristic#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planeteH_2-src/planeteH_2/ia/JoueurArtificiel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="152" column="16" lean-forward="false" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
+          <folding>
+            <element signature="docComment;method#getProchainCoup#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1702#1703#0" expanded="true" />
+            <element signature="docComment;method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="method#minimax#0;class#JoueurArtificiel#0" expanded="false" />
+            <element signature="docComment;method#minimax#1;class#JoueurArtificiel#0" expanded="false" />
           </folding>
         </state>
       </provider>

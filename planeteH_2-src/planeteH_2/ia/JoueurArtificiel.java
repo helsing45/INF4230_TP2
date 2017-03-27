@@ -13,7 +13,6 @@ import planeteH_2.Joueur;
 import planeteH_2.Position;
 
 import java.util.List;
-import java.util.Random;
 
 
 public class JoueurArtificiel implements Joueur {
@@ -37,14 +36,14 @@ public class JoueurArtificiel implements Joueur {
     @Override
     public Position getProchainCoup(Grille grille, int delais) {
         timeTurnEnd = System.currentTimeMillis() + delais;
-        //return minimax(grille, 2, getMyId(grille), Integer.MIN_VALUE, Integer.MAX_VALUE).getSecond();
-        return minimax(grille, 2, getMyId(grille), Integer.MIN_VALUE, Integer.MAX_VALUE).getSecond();
+        // Je ne suis pas sur pourquoi mais si j'utilise le minmaxWithTime limit avec deux IA ils ne font qu'alterner les couleurs,
+        // Si je planifie 3 coup d'avance (depth 3) aussi, donc avec deux coup d'avances max, ainsi que la limite de temps il fait des movements qui font du sens.
+
+        return timedMinimax(grille, 2, getMyId(grille), Integer.MIN_VALUE, Integer.MAX_VALUE).getSecond();
     }
 
     private long timeLeft() {
-        long timeLeft = timeTurnEnd - System.currentTimeMillis();
-        System.out.println("Time left: " + timeLeft);
-        return timeLeft;
+        return timeTurnEnd - System.currentTimeMillis();
     }
 
 
@@ -111,13 +110,11 @@ public class JoueurArtificiel implements Joueur {
         int score;
         Position bestPosition = null;
 
-        if (nextMoves.isEmpty() || depth == 0) {
+        if (nextMoves.isEmpty() || depth == 0 || timeLeft() <= 0) {
             score = getHeuristic(grille).evaluate(player);
             return new Pair<>(score, bestPosition);
         } else {
-            System.out.println("-----------------{ profondeur " + depth + " }-------------------");
             for (Position move : nextMoves) {
-                System.out.print("=={ "+move+"}=");
                 grille.set(move, player);
                 if (player == myId) {
                     score = minimax(grille, depth - 1, oppId, alpha, beta).getFirst();
@@ -141,39 +138,31 @@ public class JoueurArtificiel implements Joueur {
         }
     }
 
-
-    private Pair<Integer, Position> minimaxWithTimeLimit(Grille grille, int depth, int player, int alpha, int beta) {
+    private Pair<Integer, Position> timedMinimax(Grille grille, int depth, int player, int alpha, int beta) {
         int myId = getMyId(grille);
         int oppId = getOppId(grille);
-        // Generate possible next moves in a list of int[2] of {row, col}.
 
         List<Position> nextMoves = GrilleUtils.getEmptyCell(grille);
 
-        // mySeed is maximizing; while oppSeed is minimizing
         int score;
         Position bestPosition = null;
 
-        if (nextMoves.isEmpty() || timeLeft() <= 0) {
-            // Gameover or depth reached, evaluate score
-            System.out.println("No more move at profondeur " + depth);
+        if (nextMoves.isEmpty() || depth == 0) {
             score = getHeuristic(grille).evaluate(player);
             return new Pair<>(score, bestPosition);
         } else {
-            System.out.println("-----------------{ profondeur " + depth + " }-------------------");
             for (Position move : nextMoves) {
-                if (timeLeft() <= 0) {
-                    System.out.println("Kill at profondeur " + depth);
-                    return new Pair<>((player == myId) ? alpha : beta, bestPosition);
-                }
+                if(timeLeft() <= 0) break;
+
                 grille.set(move, player);
                 if (player == myId) {
-                    score = minimaxWithTimeLimit(grille, depth++, oppId, alpha, beta).getFirst();
+                    score = timedMinimax(grille, depth - 1, oppId, alpha, beta).getFirst();
                     if (score > alpha) {
                         alpha = score;
                         bestPosition = move;
                     }
                 } else {  // oppSeed is minimizing player
-                    score = minimaxWithTimeLimit(grille, depth ++, myId, alpha, beta).getFirst();
+                    score = timedMinimax(grille, depth - 1, myId, alpha, beta).getFirst();
                     if (score < beta) {
                         beta = score;
                         bestPosition = move;

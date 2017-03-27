@@ -83,13 +83,14 @@ public class IntermediaryHeuristic extends Heuristic {
     }
 
     private int getPartialScore(List<Position> group, NextPositionHandler handler) {
-        int partialEvaluation = (int) Math.pow(10, group.size() - 1);
-        partialEvaluation -= canBeComplete(group, handler) ? 0 : partialEvaluation * .25;
-        return partialEvaluation;
+        return canBeComplete(group, handler) ? (int) Math.pow(10, group.size() - 1) : -99999;
+        /*int partialEvaluation = (int) Math.pow(10, group.size() - 1);
+        partialEvaluation *= canBeComplete(group, handler) ? 2 : -2;
+        return partialEvaluation;*/
     }
 
     public boolean canBeComplete(List<Position> group, NextPositionHandler handler) {
-        return getAvailableSpace(group, handler) >= COUNT_TO_WIN;
+        return getAvailableSpace(group, handler) + group.size() >= COUNT_TO_WIN;
     }
 
     public int getAvailableSpace(List<Position> group, NextPositionHandler handler) {

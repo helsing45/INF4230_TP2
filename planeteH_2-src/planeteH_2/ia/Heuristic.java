@@ -30,12 +30,9 @@ public abstract class Heuristic {
     public int evaluate(int player) {
         int player1Score = getScore(1);
         int player2Score = getScore(2);
-        player1Score *= player == 1 ? 1 : -1;
-        player2Score *= player == 2 ? 1 : -1;
-        int score = player1Score + player2Score;
-
-        System.out.println("== SCORE: p1: " + player1Score + " p2: " + player2Score + " evaluation: " + score);
-        return score;
+        player1Score *= player == 1 ? -1 : 1;
+        player2Score *= player == 2 ? -1 : 1;
+        return player1Score + player2Score;
     }
 
     protected abstract int getScore(int player);
@@ -90,6 +87,7 @@ public abstract class Heuristic {
         List<List<Position>> groups = new ArrayList<>();
         List<Position> group = new ArrayList<>();
 
+        //System.out.println("=====  TopLeftToBottomRight  ======");
         for (int c = -grille.getData().length; c < grille.getData()[0].length; c++) {
             int c2 = c;
             int l = 0;
@@ -98,6 +96,7 @@ public abstract class Heuristic {
                 c2 = 0;
             }
             for (; c2 < grille.getData()[0].length && l < grille.getData().length; c2++, l++) {
+                //System.out.print("{" + new Position(l, c2) + "}");
                 if (grille.get(l, c2) == player) {
                     group.add(new Position(l, c2));
                 } else {
@@ -109,8 +108,9 @@ public abstract class Heuristic {
             }
             if (group.size() > 1) {
                 groups.add(new ArrayList<>(group));
-                group.clear();
             }
+            group.clear();
+            //System.out.println();
         }
 
         return groups;
@@ -120,6 +120,7 @@ public abstract class Heuristic {
         List<List<Position>> groups = new ArrayList<>();
         List<Position> group = new ArrayList<>();
 
+        //System.out.println("===== BottomLeftToTopRight =====");
         for (int c = -grille.getData().length; c < grille.getData()[0].length; c++) {
             int c2 = c;
             int l = grille.getData().length - 1;
@@ -128,6 +129,7 @@ public abstract class Heuristic {
                 c2 = 0;
             }
             for (; c2 < grille.getData()[0].length && l >= 0; c2++, l--) {
+                //System.out.print("{" + new Position(l, c2) + "}");
                 if (grille.get(l, c2) == player) {
                     group.add(new Position(l, c2));
                 } else {
@@ -139,8 +141,9 @@ public abstract class Heuristic {
             }
             if (group.size() > 1) {
                 groups.add(new ArrayList<>(group));
-                group.clear();
             }
+            group.clear();
+            //System.out.println();
         }
         return groups;
     }
